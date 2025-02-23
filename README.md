@@ -8,24 +8,24 @@ Model averaging is statistical method that is widely used to quantify the concep
 
 ### Installing: MATLAB
 
-* Download and unzip the zip file 'MATLAB_code_MODELAVG_V2.0.zip'.
-* Add the toolbox to your MATLAB search path by running the script 'install_MODELAVG.m' available in 'MATLAB_pcode_MODELAVG_V2.0'
-* You are ready to run the examples.
+* Download and unzip the zip file 'MATLAB_code_MODELAVG_V2.0.zip' in a directory 'MODELAVG'
+* Add the toolbox to your MATLAB search path by running the script 'install_MODELAVG.m' available in the root directory
+* You are ready to run the examples
 
 ### Executing program
 
-* After intalling, you can simply direct to each example folder and execute the local 'example_X.m' file.
-* Please Make sure you read carefully the instructions (i.e., green comments) in 'install_MODELAVG.m' and the manual in PDF !!!  
+* After intalling, you can simply direct to each example folder and execute the local 'example_X.m' file
+* Please Make sure you read carefully the instructions (i.e., green comments) in 'install_MODELAVG.m' and the manual !!!  
 
 ### Installing: Python
 
-* Download and unzip the zip file 'Python_code_MODELAVG_V2.0.zip' to a directory called "MODELAVG".
+* Download and unzip the zip file 'Python_code_MODELAVG_V2.0.zip' to a directory called 'MODELAVG'
 
 ### Executing program
 
 * Go to Command Prompt and directory of example_X in the root of MODELAVG
-* Now you can execute this example by typing "python example_X.py".
-* Instructions can be found in the file "MODELAVG.py" and in the manual in PDF !!!  
+* Now you can execute this example by typing 'python example_X.py'.
+* Instructions can be found in the file 'MODELAVG.py' and in the manual !!!  
 
 ## Authors
 
