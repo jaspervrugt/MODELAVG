@@ -1,4 +1,4 @@
-# MODELAVG: General-purpose model averaging toolbox in MATLAB
+# MODELAVG: General-purpose model averaging toolbox in MATLAB and Python
 
 ## Description
 
