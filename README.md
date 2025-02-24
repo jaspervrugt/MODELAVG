@@ -2,7 +2,7 @@
 
 ## Description
 
-Model averaging is statistical method that is widely used to quantify the conceptual uncertainty of environmental system models and to improve the sharpness and skill of forecast ensembles of multi-model prediction systems. Here, I present a MATLAB and Python toolbox for postprocessing of forecast ensembles. This toolbox, called MODELAVG implements many different model averaging techniques, including methods that provide point forecasts only, and methods that produce a forecast distribution of the variable(s) of interest. MCMC simulation with the DREAM_{(ZS)} algorithm is used for averaging methods without a direct closed-form solution of their point forecasts. The toolbox returns to the user (among others) a vector (or matrix with posterior samples) of weights and (if appropriate) standard deviation(s) of the members' forecast distribution, a vector of averaged forecasts (and performance metrics thereof), and (if appropriate) estimates of the width and coverage of the forecast distribution, and convergence diagnostics of the DREAM algorithm. The toolbox also creates many different figures with the results of each method. Three case studies illustrate the capabilities of the MODELAVG toolbox.
+Multi-model averaging is widely used in various scientific and engineering disciplines to post-process forecast ensembles (sharpness and skill) and/or quantify conceptual model uncertainty. Here, I present a MATLAB and Python toolbox called MODELAVG which implements a suite of different model averaging techniques, including (among others) equal weights averaging (EWA), Bates-Granger model averaging (BGA), Bayesian model averaging (BMA), Mallows model averaging (MMA), and Granger-Ramanathan averaging (GRA). Some of these methods return a point forecast only, whereas others (BMA) produce a forecast distribution of the variable(s) of interest. MCMC simulation with the DREAM$_{(ZS)}$ algorithm is used for averaging methods that do not have a direct closed-form solution for their weights (and/or shape parameters). For BMA the user can select among the normal, lognormal, generalized normal, truncated normal, gamma, Weibull, generalized extreme value and generalized Pareto distributions as conditional forecast PDFs for the ensemble members. Furthermore, they can choice among a constant and non-constance variance of these PDFs. The toolbox returns optimal values of the weights and related parameters of each model averaging method. For MMA and BMA the user has access to the entire posterior distribution of the weights and/or variances derived from MCMC simulation with the DREAM algorithm. The postprocessor summarizes the results in different figures, which are written to a PDF file. This includes traceplots of the sampled parameters, histograms of the marginal distributions of the BMA model parameters, convergence diagnostics of the sampled chains, confidence and predictive uncertainty intervals and scoring rules and performance metrics of the BMA predictive distribution. Built-in case studies with forecast ensembles of hydrologic and meteorologic models illustrate the capabilities and functionalities of the MODELAVG toolbox. 
 
 ## Getting Started
 
@@ -31,6 +31,15 @@ Model averaging is statistical method that is widely used to quantify the concep
 
 * Vrugt, Jasper A. (jasper@uci.edu) 
 
+## Literature
+1. Vrugt, J.A. (2023), MODELAVG: A MATLAB toolbox for postprocessing of model ensembles, Manual, Version 2.0, pp. 1 - XX, 2023
+2. Vrugt, J.A. (2024), Distribution-Based Model Evaluation and Diagnostics: Elicitability, Propriety, and Scoring Rules for Hydrograph Functionals, _Water Resources Research_, 60, e2023WR036710, https://doi.org/10.1029/2023WR036710
+3. Vrugt, J.A. (2015), Markov chain Monte Carlo simulation using the DREAM software package: Theory, concepts, and MATLAB implementation, _Environmental Modeling and Software_, 75, pp. 273-316
+4. Diks, C.G.H., and J.A. Vrugt (2010), Comparison of point forecast accuracy of model averaging methods in hydrologic applications, _Stochastic Environmental Research and Risk Assessment_, 24(6), pp. 809-820, https://doi.org/10.1007/s00477-010-0378-z
+5. Vrugt, J.A., C.G.H. Diks, and M.P. Clark (2008), Ensemble Bayesian model averaging using Markov chain Monte Carlo sampling, _Environmental Fluid Mechanics_, 8(5-6), 579-595, https://doi.org/10.1007/s10652-008-9106-3
+6. Vrugt, J.A., C.J.F. ter Braak, M.P. Clark, J.M. Hyman and B.A. Robinson (2008), Treatment of input uncertainty in hydrologic modeling: Doing hydrology backward with Markov chain Monte Carlo simulation, 44 (12), _Water Resources Research_, https://doi.org/10.1029/2007WR006720
+7. Vrugt, J.A., and B.A. Robinson (2007), Treatment of uncertainty using ensemble methods: Comparison of sequential data assimilation and Bayesian model averaging, _Water Resources Research_, 43, W01411, https://doi.org/10.1029/2005WR004838
+
 ## Version History
 
 * 1.0
@@ -40,4 +49,12 @@ Model averaging is statistical method that is widely used to quantify the concep
     * Python implementation
     * Source code in MATLAB and Python
 
+## Built-in Case Studies
+1. Example 1: 24-hour forecasts of river discharge
+2. Example 2: 48-forecasts of sea surface temperature
+3. Example 3: 48-forecasts of sea surface pressure
+4. Example 11: Forecasts of water levels
+5. Example 12: Hydrologic modeling
+6. Example 13: Flood modeling
+   
 ## Acknowledgments
